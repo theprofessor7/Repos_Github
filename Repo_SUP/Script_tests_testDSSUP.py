@@ -9,9 +9,9 @@ def exercices(*args,exercice):
           #-----------------------------------------condition(s) que l'on teste
           #--------------------------------------------------------------------
           if exercice==1:
-               assert double([2,3,4,19,6,15,8,7])==5, "La moyenne des nombres pairs n'est pas correcte "
+               assert moyenne([2,3,4,19,6,15,8,7])==5, "La moyenne des nombres pairs n'est pas correcte "
           elif exercice==2:
-               assert tets([2, 15, 8, 9, 4])== [9], "La liste retournée par la fonction test() n'est pas exacte"
+               assert test([2, 15, 8, 9, 4])== [9], "La liste retournée par la fonction test() n'est pas exacte"
 
           #--------------------------------------------------------------------
           #--------------------------------------------------------------------
