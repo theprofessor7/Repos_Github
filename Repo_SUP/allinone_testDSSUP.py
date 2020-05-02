@@ -39,8 +39,6 @@ document.body.addEventListener('keydown', event => {
 jQuery(document).bind("contextmenu", function(e) {
     e.preventDefault();});
 	
-alert("Vous pouvez commencer l'examen")
-
 element.append("Nombre de fois où vous avez quittté la page: 0")
 var cpt=0;
 window.addEventListener('blur', (event) => {
