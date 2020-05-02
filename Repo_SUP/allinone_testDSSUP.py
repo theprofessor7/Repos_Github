@@ -46,7 +46,7 @@ window.addEventListener('blur', (event) => {
     alert("Vous n'avez pas le droit de quitter la page")
     element.empty()
     element.append("Nombre de fois où vous avez quittté la page: ",cpt)
-
+    IPython.notebook.kernel.execute("CPT = '" + cpt + "'");
 });
 """
 display(IPython.core.display.Javascript(jscode_cmd))
