@@ -46,7 +46,7 @@ var cpt=0;
 window.addEventListener('blur', (event) => {
     cpt=cpt+1
     alert("Vous n'avez pas le droit de quitter la page")
-    IPython.notebook.kernel.execute("CPT = '" + cpt + "'")
+    IPython.notebook.kernel.execute("cpt = '" + cpt + "'")
     Jupyter.notebook.execute_cells([5]);
     
 });
