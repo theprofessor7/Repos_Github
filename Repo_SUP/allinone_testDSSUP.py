@@ -28,7 +28,10 @@ def exercices(*args,exercice):
           print ("Test échoué en ",round(tps,2)," secondes",'\n')
           print("=========================== fin du test ===========================")
 
-# Commandes Javascript pour bloquer les accès Ctrl+C/Ctrl+V aux étudiants
+def eval_compteur(cpt):
+    print("Vous avez quitté",cpt,"fois la page")
+    
+# Commandes Javascript pour bloquer les accès Ctrl+C/Ctrl+V aux étudiants + compteur de sorties
  
 jscode_cmd = """
 document.body.addEventListener('keydown', event => {
@@ -38,17 +41,15 @@ document.body.addEventListener('keydown', event => {
 	  
 jQuery(document).bind("contextmenu", function(e) {
     e.preventDefault();});
-	
-element.append("Nombre de fois où vous avez quittté la page: 0")
+
 var cpt=0;
 window.addEventListener('blur', (event) => {
     cpt=cpt+1
     alert("Vous n'avez pas le droit de quitter la page")
-    element.empty()
-    element.append("Nombre de fois où vous avez quittté la page: ",cpt)
-    IPython.notebook.kernel.execute("CPT = '" + cpt + "'");
+    IPython.notebook.kernel.execute("CPT = '" + cpt + "'")
+    Jupyter.notebook.execute_cells([5]);
+    
 });
 """
 display(IPython.core.display.Javascript(jscode_cmd))
 print("Vous pouvez commencer l'épreuve")
-
