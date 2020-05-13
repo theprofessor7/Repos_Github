@@ -9,10 +9,13 @@ def exercices(*args,exercice):
 
           #-----------------------------------------condition(s) que l'on teste
           #--------------------------------------------------------------------
-          if exercice==1:
-               assert moyenne([2,3,4,19,6,15,8,7])==5, "La moyenne des nombres pairs n'est pas correcte "
-          elif exercice==2:
-               assert test([2, 15, 8, 9, 4])== [9], "La liste retournée par la fonction test() n'est pas exacte"
+          if exercice==2:
+               assert moyenne([1,9,15])==12, "La moyenne des nombres impairs et multiples de trois n'est pas correcte "
+          elif exercice==3:
+               assert XOR(False, False)== False, "Le résultat retourné par XOR n'est pas exact"
+	       assert XOR(False, True)== True, "Le résultat retourné par XOR n'est pas exact"
+	       assert XOR(True, False)== True, "Le résultat retourné par XOR n'est pas exact"
+	       assert XOR(True, True)== False, "Le résultat retourné par XOR n'est pas exact"
 
           #--------------------------------------------------------------------
           #--------------------------------------------------------------------
@@ -45,7 +48,8 @@ jQuery(document).bind("contextmenu", function(e) {
 var cpt=0;
 window.addEventListener('blur', (event) => {
     cpt=cpt+1
-    alert("Vous n'avez pas le droit de quitter la page")
+    if cpt > 5
+    	alert("Vous n'avez pas le droit de quitter la page")
     IPython.notebook.kernel.execute("cpt = '" + cpt + "'")
     Jupyter.notebook.execute_cells([5]);
     
